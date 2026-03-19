@@ -14,7 +14,7 @@
 
   <script>
     async function saveFile() {
-      const repo = "nasrinpathan/Connecting_desktop_browser";
+      const repo = "nasrinpathan/try_2";
       const branch = "main";
       const token = "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"; // ⚠️ Replace with your PAT
       const filename = document.getElementById("fileName").value;
@@ -41,7 +41,7 @@
 
       // Create or update the file
       const response = await fetch(
-        `https://api.github.com/repos/${repo}/contents/${filename}`,
+        `https://github.com/repos/${repo}/contents/${filename}`,
         {
           method: "PUT",
           headers: {
