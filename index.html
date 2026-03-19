@@ -15,8 +15,8 @@
   <script>
     async function saveFile() {
       const repo = "nasrinpathan/try_2";
-      const branch = "main";
-      const token = "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"; // ⚠️ Replace with your PAT
+      const branch = "master"; // ✅ your repo default branch
+      const token = "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"; // ⚠️ replace with your PAT
       const filename = document.getElementById("fileName").value;
       const content = document.getElementById("fileContent").value;
 
@@ -41,7 +41,7 @@
 
       // Create or update the file
       const response = await fetch(
-        `https://github.com/repos/${repo}/contents/${filename}`,
+        `https://api.github.com/repos/${repo}/contents/${filename}`,
         {
           method: "PUT",
           headers: {
